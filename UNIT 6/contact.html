@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Suleyman Overload Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        /**
+         * Validates the contact form before submission.
+         * Checks for empty fields and valid email format.
+         * @returns {boolean} True if form is valid, false otherwise.
+         */
+        function validateForm() {
+            // Get form field values
+            const name = document.forms["contactForm"]["name"].value.trim();
+            const email = document.forms["contactForm"]["email"].value.trim();
+            const message = document.forms["contactForm"]["message"].value.trim();
+
+            // Check for empty fields
+            if (!name || !email || !message) {
+                alert("All fields must be filled out");
+                return false; // Prevent form submission
+            }
+
+            // Validate email format using a regular expression
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false; // Prevent form submission
+            }
+
+            // All validations passed
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suleyman Overload Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="workout.html">Workout Routines</a></li>
+                <li><a href="dietary.html">Dietary Advice</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero_1.avif" alt="Get in touch image">
+            <div class="hero-text">
+                <h1>Get in Touch</h1>
+            </div>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form name="contactForm" id="contactForm" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="myjourney.html">About Me</a>
+         </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/suleyman-kiani-9249a0240/" target="_blank">
+                <img src="images/linkedin-icon.webp" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/svley/?hl=en" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log("DOM is fully loaded");
+
+            $("#contactForm").submit(function(event){
+                event.preventDefault();
+                console.log("Form submitted");
+
+                if (validateForm()) {
+                    console.log("Form is valid");
+                    alert("Thank you for your message! We'll get back to you soon.");
+                    this.reset();
+                    console.log("Form reset after submission");
+                } else {
+                    console.log("Form validation failed");
+                }
+            });
+
+            console.log("jQuery form handling is ready");
+        });
+    </script>
+</body>
+
+</html>

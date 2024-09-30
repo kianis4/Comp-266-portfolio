@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Routines - Suleyman Overload Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showWorkoutDetails(id) {
+            var details = document.getElementsByClassName("workout-details");
+            for (var i = 0; i < details.length; i++) {
+                details[i].style.display = "none";
+            }
+            document.getElementById("details-" + id).style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suleyman Overload Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="workout.html">Workout Routines</a></li>
+                <li><a href="dietary.html">Dietary Advice</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero_1.avif" alt="Motivational workout image">
+            <div class="hero-text">
+                <h1>Find Your Perfect Workout</h1>
+            </div>
+        </section>
+
+        <section class="workout-section" id="beginner">
+            <h2>Beginner Workouts</h2>
+            <div class="workout-routines">
+                <p>Descriptions and tips for beginners...</p>
+                <button onclick="showWorkoutDetails(1)">Show Details</button>
+                <div id="details-1" class="workout-details">
+                    <h3>Beginner Workout Plan</h3>
+                    <p>This workout plan is designed for those new to fitness or returning after a long break. It focuses on building a foundation of strength and endurance.</p>
+                    <ul>
+                        <li><strong>Frequency:</strong> 3 times per week</li>
+                        <li><strong>Duration:</strong> 30-45 minutes per session</li>
+                        <li><strong>Rest:</strong> 1-2 minutes between exercises</li>
+                    </ul>
+                    <h4>Workout Routine:</h4>
+                    <ol>
+                        <li>Bodyweight Squats: 3 sets of 10-15 reps</li>
+                        <li>Push-ups (or Knee Push-ups): 3 sets of 5-10 reps</li>
+                        <li>Lunges: 3 sets of 10 reps per leg</li>
+                        <li>Plank: 3 sets, hold for 20-30 seconds</li>
+                        <li>Dumbbell Rows: 3 sets of 10-12 reps</li>
+                    </ol>
+                    <p>Remember to warm up before each session and cool down afterwards. Stay hydrated and listen to your body. If you experience pain, stop the exercise and consult a fitness professional.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="workout-section" id="intermediate">
+            <h2>Intermediate Workouts</h2>
+            <div class="workout-routines">
+                <p>Challenging routines for those with some fitness experience. These workouts focus on progressive overload and compound movements.</p>
+                <button onclick="showWorkoutDetails(2)">Show Details</button>
+                <div id="details-2" class="workout-details">
+                    <h3>Intermediate Workout Plan</h3>
+                    <p>This workout plan is designed for individuals who have been consistently exercising for at least 6 months. It aims to build muscle, increase strength, and improve overall fitness.</p>
+                    <ul>
+                        <li><strong>Frequency:</strong> 4-5 times per week</li>
+                        <li><strong>Duration:</strong> 45-60 minutes per session</li>
+                        <li><strong>Rest:</strong> 60-90 seconds between exercises</li>
+                    </ul>
+                    <h4>Workout Routine:</h4>
+                    <ol>
+                        <li>Barbell Squats: 4 sets of 8-10 reps</li>
+                        <li>Bench Press: 4 sets of 8-10 reps</li>
+                        <li>Deadlifts: 3 sets of 6-8 reps</li>
+                        <li>Pull-ups or Lat Pulldowns: 3 sets of 8-12 reps</li>
+                        <li>Dumbbell Shoulder Press: 3 sets of 10-12 reps</li>
+                        <li>Dips: 3 sets of 10-15 reps</li>
+                        <li>Plank: 3 sets, hold for 45-60 seconds</li>
+                    </ol>
+                    <p>Ensure proper form for all exercises. Incorporate a proper warm-up and cool-down routine. Adjust weights as needed to maintain proper form and challenge yourself.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="workout-section" id="advanced">
+            <h2>Advanced Workouts</h2>
+            <div class="workout-routines">
+                <p>Intense routines for experienced fitness enthusiasts. These workouts incorporate advanced techniques and high-intensity training.</p>
+                <button onclick="showWorkoutDetails(3)">Show Details</button>
+                <div id="details-3" class="workout-details">
+                    <h3>Advanced Workout Plan</h3>
+                    <p>This workout plan is designed for individuals with significant training experience. It focuses on maximizing muscle growth, strength gains, and overall athletic performance.</p>
+                    <ul>
+                        <li><strong>Frequency:</strong> 5-6 times per week</li>
+                        <li><strong>Duration:</strong> 60-90 minutes per session</li>
+                        <li><strong>Rest:</strong> Varies based on exercise type and intensity</li>
+                    </ul>
+                    <h4>Workout Routine:</h4>
+                    <ol>
+                        <li>Barbell Back Squats: 5 sets of 5 reps (80-85% 1RM)</li>
+                        <li>Romanian Deadlifts: 4 sets of 8 reps</li>
+                        <li>Weighted Pull-ups: 4 sets of 6-8 reps</li>
+                        <li>Incline Bench Press: 4 sets of 6-8 reps</li>
+                        <li>Standing Military Press: 4 sets of 6-8 reps</li>
+                        <li>Barbell Rows: 4 sets of 8-10 reps</li>
+                        <li>Weighted Dips: 3 sets of 8-10 reps</li>
+                        <li>Hanging Leg Raises: 3 sets of 15-20 reps</li>
+                    </ol>
+                    <p>Incorporate periodization and vary your routine to prevent plateaus. Always prioritize proper form over weight. Consider working with a professional trainer to optimize your advanced routine and minimize injury risk.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/suleyman-kiani-9249a0240/" target="_blank">
+                <img src="images/linkedin-icon.webp" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/svley/?hl=en" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

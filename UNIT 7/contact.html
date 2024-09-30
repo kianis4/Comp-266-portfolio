@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Suleyman Overload Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Updated EmailJS CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your Public Key
+        (function () {
+            emailjs.init('O7icbcOCRftAMdjFv'); // Replace 'YOUR_USER_ID' with your EmailJS Public Key
+        })();
+
+        function sendEmail(e) {
+            e.preventDefault(); // Prevent default form submission
+
+            // Gather form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            // Send email using EmailJS
+            emailjs.send('service_ja16veb', 'template_v9jabqi', formData)
+                .then(function(response) {
+                    alert('Message sent successfully!');
+                    document.getElementById('contactForm').reset(); // Reset the form
+                }, function(error) {
+                    alert('Failed to send message. Please try again later.');
+                    console.log('Failed to send email:', error);
+                });
+        }
+
+        // Validate form fields before sending
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Validate for empty fields
+            if (!name || !email || !message) {
+                alert("All fields are required!");
+                return false;
+            }
+
+            // Validate email format
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suleyman Overload Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="workout.html">Workout Routines</a></li>
+                <li><a href="dietary.html">Dietary Advice</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero_1.avif" alt="Get in touch image">
+            <div class="hero-text">
+                <h1>Get in Touch</h1>
+            </div>
+        </section>
+
+        <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form id="contactForm" onsubmit="if(validateForm()) sendEmail(event);">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="myjourney.html">About Me</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/suleyman-kiani-9249a0240/" target="_blank">
+                <img src="images/linkedin-icon.webp" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/svley/?hl=en" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

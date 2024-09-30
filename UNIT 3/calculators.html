@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculators - Suleyman Overload Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suleyman Overload Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="workout.html">Workout Routines</a></li>
+                <li><a href="dietary.html">Dietary Advice</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero_1.avif" alt="Know your numbers image">
+            <div class="hero-text">
+                <h1>Know Your Numbers</h1>
+            </div>
+        </section>
+        <section class="calculator-section">
+            <div class="calculator-container">
+                <h2>BMI Calculator</h2>
+                <form id="bmi-form">
+                    <div class="form-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" id="height" name="height">
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" name="weight">
+                    </div>
+                    <button type="button" onclick="calculateBMI()">Calculate</button>
+                </form>
+                <p id="bmi-result"></p>
+            </div>
+            <div class="calculator-container">
+                <h2>One Rep Max Calculator</h2>
+                <form id="one-rep-max-form">
+                    <div class="form-group">
+                        <label for="weight-lifted">Weight Lifted (kg):</label>
+                        <input type="number" id="weight-lifted" name="weight-lifted">
+                    </div>
+                    <div class="form-group">
+                        <label for="reps">Reps:</label>
+                        <input type="number" id="reps" name="reps">
+                    </div>
+                    <button type="button" onclick="calculateOneRepMax()">Calculate</button>
+                </form>
+                <p id="one-rep-max-result"></p>
+            </div>
+            <div class="calculator-container">
+                <h2>Maintenance Calories Calculator</h2>
+                <form id="maintenance-calories-form">
+                    <div class="form-group">
+                        <label for="weight-maint">Weight (kg):</label>
+                        <input type="number" id="weight-maint" name="weight-maint">
+                    </div>
+                    <div class="form-group">
+                        <label for="height-maint">Height (cm):</label>
+                        <input type="number" id="height-maint" name="height-maint">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="activity-level">Activity Level:</label>
+                        <select id="activity-level" name="activity-level">
+                            <option value="1.2">Sedentary (little or no exercise)</option>
+                            <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+                            <option value="1.55">Moderately active (moderate exercise 3-5 days/week)</option>
+                            <option value="1.725">Very active (intense exercise 6-7 days/week)</option>
+                            <option value="1.9">Extra active (very hard exercise/physical job)</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="calculateMaintenanceCalories()">Calculate</button>
+                </form>
+                <p id="maintenance-calories-result"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="myjourney.html">About Me</a>
+         </div>
+         <div class="social-media">
+            <a href="https://www.linkedin.com/in/suleyman-kiani-9249a0240/" target="_blank">
+                <img src="images/linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/svley/?hl=en" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

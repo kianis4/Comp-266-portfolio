@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary Advice - Suleyman Overload Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleDetails(id) {
+            var dots = document.getElementById("dots-" + id);
+            var moreText = document.getElementById("more-" + id);
+            var btnText = document.getElementById("details-btn-" + id);
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerText = "Show details";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerText = "Hide details";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suleyman Overload Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="workout.html">Workout Routines</a></li>
+                <li><a href="dietary.html">Dietary Advice</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero_1.avif" alt="Image with healthy food">
+            <div class="hero-text">
+                <h1>Fuel Your Body Right</h1>
+            </div>
+        </section>
+
+        <section class="nutrition-tips">
+            <h2>Comprehensive Nutrition Guide</h2>
+            <div class="tips">
+                <article>
+                    <h3>1. Macronutrient Balance</h3>
+                    <p>Understanding and balancing macronutrients is crucial for optimal health and fitness:<span id="dots-1">...</span></p>
+                    <div id="more-1" style="display: none;">
+                        <ul>
+                            <li><strong>Proteins (10-35% of daily calories):</strong> Essential for muscle repair and growth. Sources include lean meats, fish, eggs, dairy, legumes, and plant-based proteins.</li>
+                            <li><strong>Carbohydrates (45-65% of daily calories):</strong> Primary energy source. Focus on complex carbs like whole grains, fruits, and vegetables.</li>
+                            <li><strong>Fats (20-35% of daily calories):</strong> Vital for hormone production and nutrient absorption. Prioritize healthy fats from sources like avocados, nuts, seeds, and olive oil.</li>
+                        </ul>
+                    </div>
+                    <button onclick="toggleDetails(1)" id="details-btn-1">Show details</button>
+                </article>
+                <article>
+                    <h3>2. Micronutrient Importance</h3>
+                    <p>Don't overlook vitamins and minerals:<span id="dots-2">...</span></p>
+                    <div id="more-2" style="display: none;">
+                        <ul>
+                            <li><strong>Vitamin D:</strong> Crucial for bone health and immune function. Get sunlight exposure and consider supplements, especially in winter.</li>
+                            <li><strong>Iron:</strong> Essential for oxygen transport. Plant-based eaters should pair iron-rich foods with vitamin C for better absorption.</li>
+                            <li><strong>Calcium:</strong> Not just from dairy - leafy greens and fortified plant milks are excellent sources.</li>
+                            <li><strong>B12:</strong> Critical for nerve function and DNA synthesis. Vegans should supplement or consume fortified foods.</li>
+                        </ul>
+                    </div>
+                    <button onclick="toggleDetails(2)" id="details-btn-2">Show details</button>
+                </article>
+                <article>
+                    <h3>3. Hydration Strategies</h3>
+                    <p>Water is life - optimize your intake:<span id="dots-3">...</span></p>
+                    <div id="more-3" style="display: none;">
+                        <ul>
+                            <li>Aim for 2.7-3.7 liters per day, adjusting for activity level and climate.</li>
+                            <li>Monitor urine color - pale yellow indicates good hydration.</li>
+                            <li>Consume electrolyte-rich foods or drinks during intense workouts lasting over an hour.</li>
+                            <li>Don't wait until you're thirsty - that's often a sign of early dehydration.</li>
+                        </ul>
+                    </div>
+                    <button onclick="toggleDetails(3)" id="details-btn-3">Show details</button>
+                </article>
+                <article>
+                    <h3>4. Meal Timing and Frequency</h3>
+                    <p>Optimize your eating schedule:<span id="dots-4">...</span></p>
+                    <div id="more-4" style="display: none;">
+                        <ul>
+                            <li><strong>Pre-workout:</strong> Consume a meal rich in complex carbs and moderate protein 2-3 hours before exercise.</li>
+                            <li><strong>Post-workout:</strong> Within 30 minutes, have a meal with a 3:1 carb to protein ratio to replenish glycogen and aid muscle recovery.</li>
+                            <li><strong>Intermittent Fasting:</strong> Consider 16/8 method (16 hours fasting, 8 hours eating window) for potential metabolic benefits.</li>
+                            <li>Aim for 3 main meals and 2-3 small snacks to maintain steady energy levels throughout the day.</li>
+                        </ul>
+                    </div>
+                    <button onclick="toggleDetails(4)" id="details-btn-4">Show details</button>
+                </article>
+                <article>
+                    <h3>5. Supplementation</h3>
+                    <p>While whole foods should be the primary source of nutrients, some supplements can be beneficial:<span id="dots-5">...</span></p>
+                    <div id="more-5" style="display: none;">
+                        <ul>
+                            <li><strong>Whey Protein:</strong> Convenient for meeting protein needs, especially post-workout.</li>
+                            <li><strong>Creatine:</strong> Well-researched for improving strength and muscle mass.</li>
+                            <li><strong>Omega-3s:</strong> If you don't consume fatty fish regularly, consider fish oil or algae-based supplements.</li>
+                            <li><strong>Multivitamin:</strong> Can help fill nutritional gaps, but shouldn't replace a balanced diet.</li>
+                        </ul>
+                    </div>
+                    <button onclick="toggleDetails(5)" id="details-btn-5">Show details</button>
+                </article>
+                <article>
+                    <h3>6. Mindful Eating</h3>
+                    <p>It's not just what you eat, but how you eat:<span id="dots-6">...</span></p>
+                    <div id="more-6" style="display: none;">
+                        <ul>
+                            <li>Practice eating without distractions to better recognize hunger and fullness cues.</li>
+                            <li>Chew thoroughly to aid digestion and increase nutrient absorption.</li>
+                            <li>Use smaller plates to control portion sizes naturally.</li>
+                            <li>Listen to your body - eat when hungry, stop when satisfied, not overly full.</li>
+                        </ul>
+                    </div>
+                    <button onclick="toggleDetails(6)" id="details-btn-6">Show details</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="recipes">
+            <h2>Featured Recipes</h2>
+            <div class="recipe-list">
+                <article class="recipe-card">
+                    <h3>High-Protein Breakfast Smoothie</h3>
+                    <p><strong>Ingredients:</strong><span id="dots-7">...</span></p>
+                    <div id="more-7" style="display: none;">
+                        <ul>
+                            <li>1 scoop vanilla protein powder</li>
+                            <li>1 ripe banana</li>
+                            <li>1 cup spinach</li>
+                            <li>1 cup unsweetened almond milk</li>
+                            <li>1 tbsp chia seeds</li>
+                            <li>Ice cubes (optional)</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol>
+                            <li>Add all ingredients to a blender.</li>
+                            <li>Blend until smooth and creamy.</li>
+                            <li>Pour into a glass and enjoy immediately.</li>
+                        </ol>
+                        <p><strong>Nutritional Info:</strong> 300 calories, 25g protein, 30g carbs, 10g fat</p>
+                        <p><strong>Benefits:</strong> This smoothie provides a balanced mix of protein, complex carbohydrates, and healthy fats. The protein powder supports muscle recovery, while the banana offers easily digestible energy. Spinach adds vital micronutrients, and chia seeds provide omega-3 fatty acids and fiber.</p>
+                    </div>
+                    <button onclick="toggleDetails(7)" id="details-btn-7">Show details</button>
+                </article>
+                <article class="recipe-card">
+                    <h3>Grilled Chicken and Quinoa Salad</h3>
+                    <p><strong>Ingredients:</strong><span id="dots-8">...</span></p>
+                    <div id="more-8" style="display: none;">
+                        <ul>
+                            <li>4 oz grilled chicken breast, sliced</li>
+                            <li>1/2 cup cooked quinoa</li>
+                            <li>2 cups mixed greens</li>
+                            <li>1/4 cup cherry tomatoes, halved</li>
+                            <li>1/4 avocado, diced</li>
+                            <li>2 tbsp lemon vinaigrette</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol>
+                            <li>Combine mixed greens, quinoa, tomatoes, and avocado in a bowl.</li>
+                            <li>Top with sliced grilled chicken.</li>
+                            <li>Drizzle with lemon vinaigrette and toss gently.</li>
+                        </ol>
+                        <p><strong>Nutritional Info:</strong> 400 calories, 35g protein, 30g carbs, 15g fat</p>
+                        <p><strong>Benefits:</strong> This salad offers a perfect balance of lean protein from the chicken, complex carbs from quinoa, and healthy fats from avocado. The mixed greens and tomatoes provide essential vitamins and antioxidants. It's an ideal post-workout meal to support muscle recovery and overall health.</p>
+                    </div>
+                    <button onclick="toggleDetails(8)" id="details-btn-8">Show details</button>
+                </article>
+                <article class="recipe-card">
+                    <h3>Overnight Oats</h3>
+                    <p><strong>Ingredients:</strong><span id="dots-9">...</span></p>
+                    <div id="more-9" style="display: none;">
+                        <ul>
+                            <li>1/2 cup rolled oats</li>
+                            <li>1/2 cup Greek yogurt</li>
+                            <li>1/2 cup unsweetened almond milk</li>
+                            <li>1 tbsp chia seeds</li>
+                            <li>1 tbsp honey</li>
+                            <li>1/4 cup mixed berries</li>
+                        </ul>
+                        <h4>Instructions:</h4>
+                        <ol>
+                            <li>Mix oats, yogurt, almond milk, chia seeds, and honey in a jar.</li>
+                            <li>Refrigerate overnight or for at least 4 hours.</li>
+                            <li>Top with mixed berries before serving.</li>
+                        </ol>
+                        <p><strong>Nutritional Info:</strong> 350 calories, 20g protein, 45g carbs, 12g fat</p>
+                        <p><strong>Benefits:</strong> Overnight oats are a convenient and nutritious breakfast option. The oats provide slow-releasing carbohydrates for sustained energy, while Greek yogurt adds protein for satiety. Chia seeds contribute omega-3 fatty acids and fiber, and berries offer antioxidants. This meal supports digestive health and provides steady energy throughout the morning.</p>
+                    </div>
+                    <button onclick="toggleDetails(9)" id="details-btn-9">Show details</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="myjourney.html">About Me</a>
+         </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/suleyman-kiani-9249a0240/" target="_blank">
+                <img src="images/linkedin-icon.webp" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/svley/?hl=en" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Wait for the DOM to be fully loaded before executing the script
+            $(".show-details-btn").click(function(){
+                // When a button with class "show-details-btn" is clicked...
+                $(this).siblings(".more-details").slideToggle("fast");
+                // Find the sibling element with class "more-details" and toggle its visibility with a sliding animation
+
+                // Change the button text between "Show more" and "Show less"
+                $(this).text(function(i, text){
+                    // 'i' is the index (not used here), 'text' is the current button text
+                    return text === "Show more" ? "Show less" : "Show more";
+                    // If the current text is "Show more", change it to "Show less", and vice versa
+                });
+            });
+
+            // Test if this script is working
+            console.log("jQuery script for toggling details is loaded and ready.");
+            $(".show-details-btn").first().click(); // Simulate a click on the first button
+            console.log("Simulated click on first 'Show details' button.");
+        });
+    </script>
+</body>
+
+</html>

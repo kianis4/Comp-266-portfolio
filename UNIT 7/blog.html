@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Suleyman Overload Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        /**
+         * Toggles the visibility of the full blog post content and updates the read more/less button.
+         * 
+         * @param {string} id - The unique identifier for the blog post.
+         */
+        function toggleReadMore(id) {
+            // Get the DOM elements for the specific blog post
+            var dots = document.getElementById("dots-" + id);
+            var moreText = document.getElementById("more-" + id);
+            var btnText = document.getElementById("read-more-btn-" + id);
+
+            // Check if the full content is currently hidden
+            if (dots.style.display === "none") {
+                // If full content is visible, hide it and show the ellipsis
+                dots.style.display = "inline";
+                btnText.innerText = "Read more";
+                moreText.style.display = "none";
+            } else {
+                // If full content is hidden, show it and hide the ellipsis
+                dots.style.display = "none";
+                btnText.innerText = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suleyman Overload Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workout.html">Workout Routines</a></li>
+                <li><a href="dietary.html">Dietary Advice</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero_1.avif" alt="Stay updated image">
+            <div class="hero-text">
+                <h1>My Year-Long Fitness Journey</h1>
+            </div>
+        </section>
+        <section class="latest-posts">
+            <h2>Monthly Progress</h2>
+            <div class="posts">
+                <article>
+                    <h3>Month 1: The Beginning - 143 lbs, 24% Body Fat</h3>
+                    <p>Today marks the start of my fitness journey<span id="dots-1">...</span><span id="more-1" class="more-content" style="display:none;">. I'm both excited and nervous as I step on the scale: 143 lbs with 24% body fat. My first workout was humbling - I could barely do 5 push-ups and my 1 rep max for squats was just 95 lbs. I've set up a 4-day split routine focusing on compound movements: squats, deadlifts, bench press, and overhead press. For nutrition, I'm starting with a modest 300 calorie surplus, aiming for 2,500 calories per day with a macro split of 40% carbs, 30% protein, and 30% fat. I'm also taking progress photos and measurements to track changes beyond just the scale. Here's to the start of something great!</span></p>
+                    <button id="read-more-btn-1" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 2: Small Changes, Big Impact - 145 lbs, 23% Body Fat</h3>
+                    <p>One month in, and I'm already seeing changes<span id="dots-2">...</span><span id="more-2" class="more-content" style="display:none;">. I've gained 2 lbs and my body fat is down to 23%. My lifts have improved significantly: squat is up to 115 lbs, bench press to 85 lbs, and I can now do 8 clean push-ups. I've adjusted my diet to include more protein-rich foods like chicken breast, Greek yogurt, and whey protein shakes. I'm averaging about 180g of protein per day now. Sleep has been crucial - I'm aiming for 8 hours per night and it's making a huge difference in my recovery. The biggest challenge so far has been consistency, especially on days when I'm tired or busy, but I'm pushing through. Feeling stronger and more energetic every day!</span></p>
+                    <button id="read-more-btn-2" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 3: Overcoming the First Plateau - 147 lbs, 22% Body Fat</h3>
+                    <p>Hit my first plateau this month<span id="dots-3">...</span><span id="more-3" class="more-content" style="display:none;">. Weight gain slowed down, but I've dropped another 1% body fat. I've learned about progressive overload and have started increasing my weights by 5 lbs every week or two. My current lifts: squat 135 lbs, bench press 100 lbs, deadlift 165 lbs. I've also added accessory exercises like rows, pull-ups (assisted for now), and dips to target smaller muscle groups. Nutrition-wise, I've increased my calorie intake to 2,700 to support muscle growth. I'm experimenting with meal timing, having a big meal with complex carbs about 2 hours before my workout, and a protein shake immediately after. It's challenging, but I'm seeing my body change and it's incredibly motivating!</span></p>
+                    <button id="read-more-btn-3" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 4: Nutrition Fine-Tuning - 149 lbs, 21% Body Fat</h3>
+                    <p>This month was all about nutrition<span id="dots-4">...</span><span id="more-4" class="more-content" style="display:none;">. I've been diving deep into nutritional science, learning about the importance of micronutrients alongside macros. I've added more variety to my diet, incorporating foods like sweet potatoes, quinoa, and a range of colorful vegetables. I'm also focusing on healthy fats from sources like avocados, nuts, and olive oil. My post-workout nutrition has been key - I'm now having a meal with a 3:1 carb to protein ratio within 30 minutes of finishing my workout. In terms of progress, my weight is up to 149 lbs, and body fat is down to 21%. Strength gains continue: squat 155 lbs, bench press 120 lbs, deadlift 185 lbs. I've also started tracking my measurements and have gained an inch on my arms and chest. The mirror is becoming my best friend - I'm starting to see real changes in my physique!</span></p>
+                    <button id="read-more-btn-4" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 5: Halfway Point - 152 lbs, 20% Body Fat</h3>
+                    <p>Reached a significant milestone this month<span id="dots-5">...</span><span id="more-5" class="more-content" style="display:none;">. I'm now at 152 lbs with 20% body fat. That's 9 lbs of muscle gained and 4% body fat lost! My lifts have all increased significantly: squat 185 lbs, bench press 135 lbs, deadlift 225 lbs. I'm seeing real definition in my shoulders and arms, and my chest is starting to pop. I've had to buy new clothes as my old ones are getting tight around the chest and arms, but loose around the waist. I've also noticed improvements in my overall health - my resting heart rate has dropped from 72 to 64 bpm, and I have so much more energy throughout the day. I've started incorporating drop sets and supersets into my routine to increase intensity. The journey is challenging, but seeing these results is incredibly motivating. Onwards and upwards!</span></p>
+                    <button id="read-more-btn-5" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 6: Focusing on Form - 153 lbs, 19% Body Fat</h3>
+                    <p>This month I prioritized perfecting my form<span id="dots-6">...</span><span id="more-6" class="more-content" style="display:none;">. As weights got heavier, I noticed my form starting to slip, especially on compound lifts. I took a step back, reduced the weights, and really focused on proper technique. I've been recording my lifts and analyzing them, which has been eye-opening. I've also started incorporating pause reps and tempo training to improve mind-muscle connection. The results have been fantastic - even though I'm lifting slightly less weight, I'm feeling it more in the target muscles. My current lifts with perfect form: squat 175 lbs, bench press 130 lbs, deadlift 215 lbs. Weight has stabilized at 153 lbs, but body fat is down another 1% to 19%. I'm also seeing improvements in flexibility and reduced joint pain. This focus on form is setting a solid foundation for future progress.</span></p>
+                    <button id="read-more-btn-6" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 7: Introducing HIIT - 155 lbs, 18% Body Fat</h3>
+                    <p>Added High-Intensity Interval Training (HIIT) to my routine<span id="dots-7">...</span><span id="more-7" class="more-content" style="display:none;">. I'm now doing two 20-minute HIIT sessions per week, usually involving exercises like burpees, mountain climbers, and kettlebell swings. It's been a game-changer for fat loss and cardiovascular fitness. I'm now at 155 lbs with 18% body fat. The HIIT sessions are tough, but the endorphin rush is amazing. I've noticed significant improvements in my recovery between sets during weight training. My resting heart rate is now down to 60 bpm. In terms of strength, I'm back to progressive overload: squat 195 lbs, bench press 145 lbs, deadlift 245 lbs. I've achieved my first unassisted pull-up this month - a huge milestone! Nutrition remains crucial - I've increased my calorie intake to 2,900 to fuel these intense workouts. The combination of weight training and HIIT is really accelerating my progress.</span></p>
+                    <button id="read-more-btn-7" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 8: Rest and Recovery Focus - 156 lbs, 17% Body Fat</h3>
+                    <p>Learned the hard way about the importance of recovery<span id="dots-8">...</span><span id="more-8" class="more-content" style="display:none;">. After pushing hard for seven months, I hit a wall. Fatigue set in, my motivation dipped, and I even experienced some mild injuries. This month, I took a step back and focused on recovery. I reduced my training volume by about 30% and really honed in on sleep quality. I'm now consistently getting 8-9 hours of sleep per night. I've also incorporated daily stretching and twice-weekly yoga sessions. Nutrition-wise, I'm paying more attention to micronutrients and have added foods rich in omega-3s and antioxidants. I've started taking ZMA supplements before bed, which seem to be helping with sleep quality. Despite the reduced training volume, I've still made progress: 156 lbs with 17% body fat. My lifts have maintained: squat 195 lbs, bench press 145 lbs, deadlift 245 lbs. Most importantly, I feel refreshed and ready to push forward again. This month has taught me that recovery is just as important as the workouts themselves.</span></p>
+                    <button id="read-more-btn-8" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 9: New Personal Records - 158 lbs, 16% Body Fat</h3>
+                    <p>Smashed through some major lifting milestones this month<span id="dots-9">...</span><span id="more-9" class="more-content" style="display:none;">. The focus on form and recovery has really paid off. I've hit new PRs across the board: squat 225 lbs, bench press 175 lbs, deadlift 275 lbs. I'm up to 158 lbs body weight, with body fat down to 16%. I'm starting to see abs for the first time in my life! I've switched to a Push/Pull/Legs routine, which allows me to hit each muscle group twice a week. I'm also doing more unilateral exercises to address muscle imbalances. Nutrition remains on point - I'm up to 3,000 calories per day, with a macro split of 40% carbs, 35% protein, and 25% fat. I'm paying more attention to nutrient timing, having most of my carbs around my workouts. The mental aspect of lifting heavy is challenging, but I'm learning to push through mental barriers. Confidence is at an all-time high, both in and out of the gym.</span></p>
+                    <button id="read-more-btn-9" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 10: Fine-Tuning Nutrition - 159 lbs, 15% Body Fat</h3>
+                    <p>This month was about dialing in my nutrition<span id="dots-10">...</span><span id="more-10" class="more-content" style="display:none;">. I've started experimenting with carb cycling - higher carb intake on training days, lower on rest days. It's been effective for maintaining energy while continuing to lose fat. I'm now down to 15% body fat while maintaining my weight at 159 lbs. I've also started tracking my micronutrients more closely and have added a multivitamin and fish oil supplement to my regimen. In terms of training, I've incorporated more explosive movements like power cleans and box jumps to improve power output. My main lifts continue to improve: squat 245 lbs, bench press 195 lbs, deadlift 305 lbs. I've also started doing more core-specific work, which is helping with overall stability in my lifts. The mind-muscle connection I've developed is incredible - I can really feel each muscle working during exercises. Feeling lean, strong, and more athletic than ever!</span></p>
+                    <button id="read-more-btn-10" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 11: Mental Toughness - 160 lbs, 14% Body Fat</h3>
+                    <p>Focusing on the mental aspect of fitness this month<span id="dots-11">...</span><span id="more-11" class="more-content" style="display:none;">. I've incorporated meditation and visualization into my routine, spending 10 minutes each morning visualizing successful lifts and progress. It's amazing how much of fitness is mental. I'm seeing improvements in my focus during workouts and my ability to push through tough sets. I've also started keeping a detailed workout journal, which helps me stay accountable and track patterns in my performance. Physically, I'm at 160 lbs with 14% body fat. Strength gains continue: squat 265 lbs, bench press 215 lbs, deadlift 325 lbs. I've added more variation to my routine with techniques like drop sets, rest-pause sets, and mechanical drop sets to shock my muscles. Nutrition remains crucial - I'm maintaining 3,000 calories but have shifted to a 45% carb, 35% protein, 20% fat split. The mental focus combined with physical training is taking my fitness to new heights.</span></p>
+                    <button id="read-more-btn-11" class="read-more-btn">Read more</button>
+                </article>
+                <article>
+                    <h3>Month 12: The Finish Line - 160 lbs, 13% Body Fat</h3>
+                    <p>One year later, and what a journey it's been<span id="dots-12">...</span><span id="more-12" class="more-content" style="display:none;">. I've reached my goal of 160 lbs with 13% body fat. That's 17 lbs of muscle gained and 11% body fat lost! My final lift numbers: squat 285 lbs, bench press 225 lbs, deadlift 345 lbs. I can do 15 pull-ups and 50 push-ups in a single set. Beyond the numbers, the transformation in how I feel is incredible. I have boundless energy, my posture has improved, and I feel confident in my own skin. My resting heart rate is down to 55 bpm, and I've had to replace my entire wardrobe twice! Looking back, the keys to my success were consistency, progressive overload, proper nutrition, adequate rest, and most importantly, patience. There were ups and downs, plateaus and breakthroughs, but I never gave up. This journey has taught me so much about discipline, the power of incremental progress, and the importance of a holistic approach to health. But this isn't the end - it's just the beginning of a lifelong commitment to health and fitness. I'm excited to set new goals and see what I can achieve in the coming years. Here's to the next chapter!</span></p>
+                    <button id="read-more-btn-12" class="read-more-btn">Read more</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="myjourney.html">About Me</a>
+         </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/suleyman-kiani-9249a0240/" target="_blank">
+                <img src="images/linkedin-icon.webp" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/svley/?hl=en" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log("DOM is fully loaded");
+            $(".read-more-btn").click(function(){
+                console.log("Read more button clicked");
+                var moreContent = $(this).siblings("p").find(".more-content");
+                console.log("More content element:", moreContent);
+                moreContent.slideToggle("fast", function() {
+                    console.log("Slide toggle completed");
+                });
+
+                var newText = $(this).text() == "Read more" ? "Read less" : "Read more";
+                console.log("New button text:", newText);
+                $(this).text(newText);
+            });
+        });
+    </script>
+</body>
+
+</html>

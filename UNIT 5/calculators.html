@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculators - Suleyman Overload Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Suleyman Overload Pro</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="myjourney.html">My Journey</a></li>
+                <li><a href="workout.html">Workout Routines</a></li>
+                <li><a href="dietary.html">Dietary Advice</a></li>
+                <li><a href="progress.html">Progress Tracker</a></li>
+                <li><a href="calculators.html">Calculators</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero_1.avif" alt="Know your numbers image">
+            <div class="hero-text">
+                <h1>Know Your Numbers</h1>
+            </div>
+        </section>
+        <section class="calculator-section">
+            <div class="calculator-container">
+                <h2>BMI Calculator</h2>
+                <form id="bmi-form">
+                    <div class="form-group">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" id="height" name="height">
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" id="weight" name="weight">
+                    </div>
+                    <button type="button" onclick="calculateBMI()">Calculate</button>
+                </form>
+                <p id="bmi-result"></p>
+            </div>
+            <div class="calculator-container">
+                <h2>One Rep Max Calculator</h2>
+                <form id="one-rep-max-form">
+                    <div class="form-group">
+                        <label for="weight-lifted">Weight Lifted (kg):</label>
+                        <input type="number" id="weight-lifted" name="weight-lifted">
+                    </div>
+                    <div class="form-group">
+                        <label for="reps">Reps:</label>
+                        <input type="number" id="reps" name="reps">
+                    </div>
+                    <button type="button" onclick="calculateOneRepMax()">Calculate</button>
+                </form>
+                <p id="one-rep-max-result"></p>
+            </div>
+            <div class="calculator-container">
+                <h2>Maintenance Calories Calculator</h2>
+                <form id="maintenance-calories-form">
+                    <div class="form-group">
+                        <label for="weight-maint">Weight (kg):</label>
+                        <input type="number" id="weight-maint" name="weight-maint">
+                    </div>
+                    <div class="form-group">
+                        <label for="height-maint">Height (cm):</label>
+                        <input type="number" id="height-maint" name="height-maint">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="activity-level">Activity Level:</label>
+                        <select id="activity-level" name="activity-level">
+                            <option value="1.2">Sedentary (little or no exercise)</option>
+                            <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+                            <option value="1.55">Moderately active (moderate exercise 3-5 days/week)</option>
+                            <option value="1.725">Very active (intense exercise 6-7 days/week)</option>
+                            <option value="1.9">Extra active (very hard exercise/physical job)</option>
+                        </select>
+                    </div>
+                    <button type="button" onclick="calculateMaintenanceCalories()">Calculate</button>
+                </form>
+                <p id="maintenance-calories-result"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="myjourney.html">About Me</a>
+         </div>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/suleyman-kiani-9249a0240/" target="_blank">
+                <img src="images/linkedin-icon.webp" alt="LinkedIn">
+            </a>
+            <a href="https://www.instagram.com/svley/?hl=en" target="_blank">
+                <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+    <script>
+        /**
+         * Calculates the Body Mass Index (BMI) based on user input.
+         * 
+         * This function retrieves the height and weight values entered by the user,
+         * validates the input, calculates the BMI using the formula: weight (kg) / (height (m))^2,
+         * and displays the result or an error message if the input is invalid.
+         * 
+         * The BMI categories are also provided for context.
+         */
+        function calculateBMI() {
+            // Retrieve height and weight values from input fields
+            const height = parseFloat(document.getElementById('height').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+
+            // Check if both height and weight are positive values and not NaN
+            if (height > 0 && weight > 0 && !isNaN(height) && !isNaN(weight)) {
+                // Calculate BMI
+                // Note: Height is converted from cm to m by dividing by 100
+                const bmi = (weight / ((height / 100) ** 2)).toFixed(1);
+
+                // Determine BMI category
+                let category;
+                if (bmi < 18.5) {
+                    category = "Underweight";
+                } else if (bmi < 25) {
+                    category = "Normal weight";
+                } else if (bmi < 30) {
+                    category = "Overweight";
+                } else {
+                    category = "Obese";
+                }
+
+                // Display the calculated BMI and category
+                document.getElementById('bmi-result').innerHTML = `Your BMI is ${bmi}<br>Category: ${category}`;
+            } else {
+                // Display an error message if input is invalid
+                document.getElementById('bmi-result').innerText = 'Please enter valid positive numbers for height and weight.';
+            }
+        }
+
+        /**
+         * Calculates the One Rep Max (1RM) based on weight lifted and number of reps.
+         * 
+         * @description
+         * This function uses the Brzycki formula: 1RM = weight * (36 / (37 - reps))
+         * It's considered accurate for rep ranges up to 10.
+         * 
+         * @function
+         * @name calculateOneRepMax
+         * 
+         * @returns {void} - Updates the DOM with the calculation result or error message
+         */
+        function calculateOneRepMax() {
+            // Parse input values from the DOM
+            const weight = parseFloat(document.getElementById('weight-lifted').value);
+            const reps = parseInt(document.getElementById('reps').value);
+
+            // Validate input and calculate 1RM
+            if (weight > 0 && reps > 0 && reps <= 10) {
+                // Apply Brzycki formula and round to 2 decimal places
+                const oneRepMax = (weight * (36 / (37 - reps))).toFixed(2);
+                // Display the calculated 1RM
+                document.getElementById('one-rep-max-result').innerText = `Your estimated One Rep Max is ${oneRepMax} kg`;
+            } else if (weight > 0 && reps > 10) {
+                // Warn user if reps exceed recommended range for accurate calculation
+                document.getElementById('one-rep-max-result').innerText = 'For accurate results, please enter 10 reps or fewer.';
+            } else {
+                // Display error message for invalid input
+                document.getElementById('one-rep-max-result').innerText = 'Please enter valid positive numbers for weight and reps.';
+            }
+        }
+
+        /**
+         * Calculates the Maintenance Calories based on user input.
+         * 
+         * @description
+         * This function uses the Mifflin-St Jeor Equation to calculate Basal Metabolic Rate (BMR),
+         * then multiplies it by an activity factor to estimate daily maintenance calories.
+         * 
+         * @function
+         * @name calculateMaintenanceCalories
+         * 
+         * @returns {void} - Updates the DOM with the calculation result or error message
+         */
+        function calculateMaintenanceCalories() {
+            // Parse input values from the DOM
+            const weight = parseFloat(document.getElementById('weight-maint').value);
+            const height = parseFloat(document.getElementById('height-maint').value);
+            const age = parseInt(document.getElementById('age').value);
+            const gender = document.getElementById('gender').value;
+            const activityLevel = parseFloat(document.getElementById('activity-level').value);
+
+            // Validate input
+            if (weight > 0 && height > 0 && age > 0 && !isNaN(activityLevel)) {
+                // Calculate BMR using Mifflin-St Jeor Equation
+                let bmr;
+                if (gender === "male") {
+                    // BMR formula for males
+                    bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+                } else if (gender === "female") {
+                    // BMR formula for females
+                    bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+                } else {
+                    // Handle invalid gender input
+                    document.getElementById('maintenance-calories-result').innerText = 'Please select a valid gender.';
+                    return;
+                }
+
+                // Calculate maintenance calories by multiplying BMR with activity level
+                const maintenanceCalories = (bmr * activityLevel).toFixed(0);
+                
+                // Display the calculated maintenance calories
+                document.getElementById('maintenance-calories-result').innerText = `Your estimated Maintenance Calories are ${maintenanceCalories} kcal/day`;
+            } else {
+                // Display error message for invalid input
+                document.getElementById('maintenance-calories-result').innerText = 'Please enter valid positive numbers for all fields.';
+            }
+        }
+    </script>
+</body>
+
+</html>
